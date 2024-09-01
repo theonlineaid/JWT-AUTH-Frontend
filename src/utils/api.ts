@@ -31,6 +31,8 @@ const api = {
     logout: () => postData('/auth/logout', {}),
     getProfile: () => fetchData('/auth/me'),
     // Add more API endpoints as needed
+
+    products: () => fetchData('/products')
 };
 
 export default api;

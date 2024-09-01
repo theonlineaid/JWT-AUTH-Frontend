@@ -1,3 +1,4 @@
+import ProductCard from './components/ProductCard';
 import { useAuth } from './context/AuthContext'; // Import the useAuth hook
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
@@ -21,6 +22,9 @@ function App() {
       <h1 className="text-3xl font-bold underline">
         Hello world!
       </h1>
+
+      <ProductCard />
+      
       <button
         onClick={handleLogout}
         className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"

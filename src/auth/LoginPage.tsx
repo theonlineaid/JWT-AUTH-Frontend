@@ -10,15 +10,11 @@ const LoginPage: React.FC = () => {
 
     const handleLogin = async (e: FormEvent) => {
         e.preventDefault();
-        try {
-            await login({ email, password });
-            console.log('Login successful');
-            // Redirect to a protected route, e.g., dashboard or home
-            navigate('/'); // Change '/dashboard' to your protected route
-        } catch (error) {
-            console.error('Error logging in:', error);
-            // Handle login error, possibly show a message to the user
-        }
+
+        await login({ email, password });
+        console.log('Login successful');
+        navigate('/');
+
     };
 
     return (
